@@ -17,8 +17,8 @@ class Route {
   }
 
   blocksTravelled() {
-    let verticalDistance = Math.abs(parseInt(this.beginningLocation.vertical) - parseInt(this.endingLocation.vertical))
-    let horizontalDistance = Math.abs(parseInt(horizontalBlocks.indexOf(this.beginningLocation.horizontal)) - parseInt(horizontalBlocks.indexOf(this.endingLocation.horizontal)) )
+    let verticalDistance = Math.abs(this.beginningLocation.vertical - this.endingLocation.vertical)
+    let horizontalDistance = Math.abs(horizontalBlocks.indexOf(this.beginningLocation.horizontal) - horizontalBlocks.indexOf(this.endingLocation.horizontal))
     return verticalDistance + horizontalDistance
   }
 
@@ -30,6 +30,6 @@ class Route {
       blocksPerMinute = 3
     }
     let blocks = this.blocksTravelled()
-    return parseInt(blocks/blocksPerMinute)
+    return blocks/blocksPerMinute
   }
 }
