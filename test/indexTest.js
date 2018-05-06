@@ -8,7 +8,7 @@ describe('driver', function() {
 
   describe('creating a new driver', function() {
     it('can create a Driver with a name and startDate', function() {
-      expect(driver.name).to.equal("Alfie")
+     expect(driver.name).to.equal("Alfie")
     })
 
     it('sets the driver startDate as a date object', function() {
