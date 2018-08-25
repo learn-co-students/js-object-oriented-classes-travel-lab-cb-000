@@ -28,11 +28,7 @@ class Route {
   estimatedTime(time){
     let min;
     let distance = this.blocksTravelled();
-    if (time) {
-      min = distance / 2;
-    } else{
-      min = distance / 3;
-    }
+    time ? (min = distance / 2) : (min = distance / 3);
     return min;
   }
 }
